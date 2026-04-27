@@ -62,4 +62,20 @@ fn main (){
     println!("{}, {}", nested.0.0, nested.1.0);
     //nested.0 - first 1, 0.0 => first element in first tuple
 
+    // Array - fixed size, known at compile time, Slice length is not knowwn at compile time
+    //Array //vectors grow and shirnk
+    let arr: [u32; 3] = [1,2,3];
+    let b=arr[0];
+    let a = arr[1];
+
+    let arr: [u32; 10] = [0;10];
+    println!("arr {:?}", arr);
+
+    //Slice used to cut portions of an array
+    let num = [-1, 1, -2, 2, -3, 3, -4, 4, -5, 5];
+
+    // &means refernce to now its saying from the index 0 up to 3 but the 3 is excluded 
+    let s = &num[0..3];
+    println!("{:?}",s)
+
 }
